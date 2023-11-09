@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-const url = "https://api.themoviedb.org/3/authentication";
+const url = "https://api.themoviedb.org/3/";
 const options = {
   method: "GET",
   headers: {
