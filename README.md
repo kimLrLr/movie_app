@@ -3,8 +3,8 @@
 ## 설치 항목
 
 - [x] react-router-dom
-- [] styled-components
-- [] style-reset
+- [x] styled-components
+- [x] styled-reset
 - [] react-hook-form
 - [] react-helmet
 - [] Font Awsome & cdn
