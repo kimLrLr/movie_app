@@ -1,6 +1,8 @@
 const fetch = require("node-fetch");
 
-const url = "https://api.themoviedb.org/3/";
+const baseUrl = "https://api.themoviedb.org/3/";
+const nowPlayingUrl = baseUrl + "movie/now_playing" + "?language=ko_kr";
+
 const options = {
   method: "GET",
   headers: {
@@ -10,7 +12,6 @@ const options = {
   },
 };
 
-fetch(url, options)
-  .then((res) => res.json())
-  .then((json) => console.log(json))
-  .catch((err) => console.error("error:" + err));
+export const nowPlaying = fetch(nowPlayingUrl, options).then((res) =>
+  res.json()
+);
