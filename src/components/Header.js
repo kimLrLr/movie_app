@@ -26,7 +26,7 @@ const Logo = styled.div`
   }
 `;
 
-const Menu = styled.div`
+const Menu = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;

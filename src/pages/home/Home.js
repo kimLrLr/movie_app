@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { nowPlaying } from "../../api";
 
 const MainBanner = styled.section`
   height: 80vh;
@@ -42,20 +44,53 @@ const BlackBg = styled.div`
 `;
 
 export const Home = () => {
-  nowPlaying();
+  // 1. 마운트시 api에 요청
+  // 2. 비동기 통신
+  // 3. 예외 처리
+
+  const [nowPlayingData, setNowPlayingData] = useState();
+  // =>밖에서도 지역변수였던 results를 사용하기 위해서 useState 사용(함수 밖으로 빼내기 위함)
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const { results } = await nowPlaying();
+        // console.log(results[0].title);
+        // => results는 비구조화할당으로 배열이기 때문에 위처럼 [n번째]를 사용해야함
+        setNowPlayingData(results);
+        // =>밖에서도 지역변수였던 results를 사용하기 위해서
+        setLoading(false);
+      } catch (error) {
+        console.log("에러: " + error);
+      }
+    })();
+  }, []);
+
+  console.log(loading);
+  console.log(nowPlayingData);
 
   return (
-    <div>
-      <MainBanner>
-        <BlackBg />
-        <h3>This Is Title</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sit
-          eligendi ipsa officia a facilis eos nostrum, voluptas ratione
-          repudiandae neque nemo at earum saepe omnis optio vero vitae
-          consequuntur!
-        </p>
-      </MainBanner>
-    </div>
+    <>
+      {loading ? (
+        "loading..."
+      ) : (
+        <div>
+          {nowPlayingData && (
+            <MainBanner>
+              <BlackBg />
+              <h3>{nowPlayingData[0].title}</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+                sit eligendi ipsa officia a facilis eos nostrum, voluptas
+                ratione repudiandae neque nemo at earum saepe omnis optio vero
+                vitae consequuntur!
+              </p>
+            </MainBanner>
+          )}
+        </div>
+      )}
+    </>
   );
 };
