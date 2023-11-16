@@ -30,10 +30,10 @@ const Menu = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   li {
-    margin-left: 20px;
+    margin-left: 50px;
   }
 `;
 
