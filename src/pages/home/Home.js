@@ -4,6 +4,7 @@ import { Banner } from "./Banner";
 import "swiper/css";
 import { ShowMovie } from "./ShowMovie";
 import { Loading } from "./Loading";
+import { Layout } from "../../components/Layout";
 
 export const Home = () => {
   // 1. 마운트시 api에 요청
@@ -59,13 +60,15 @@ export const Home = () => {
           {nowPlayingData && (
             <>
               <Banner data={nowPlayingData[0]} />
-              <ShowMovie
-                titleName={"현재 상영 영화"}
-                movieData={nowPlayingData}
-              />
-              <ShowMovie titleName={"인기 영화"} movieData={popData} />
-              <ShowMovie titleName={"평점 좋은 영화"} movieData={ratedData} />
-              <ShowMovie titleName={"개봉 예정작"} movieData={upData} />
+              <Layout>
+                <ShowMovie
+                  titleName={"현재 상영 영화"}
+                  movieData={nowPlayingData}
+                />
+                <ShowMovie titleName={"인기 영화"} movieData={popData} />
+                <ShowMovie titleName={"평점 좋은 영화"} movieData={ratedData} />
+                <ShowMovie titleName={"개봉 예정작"} movieData={upData} />
+              </Layout>
             </>
           )}
         </div>

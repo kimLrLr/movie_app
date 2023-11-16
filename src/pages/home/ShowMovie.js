@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { IMG_URL } from "../../constants";
 
-const Layout = styled.section`
-  padding: 150px 5%;
+const Container = styled.section`
+  margin-bottom: 80px;
   a {
     color: white;
   }
@@ -66,7 +66,7 @@ const params = {
 
 export const ShowMovie = ({ titleName, movieData }) => {
   return (
-    <Layout>
+    <Container>
       <Title>{titleName}</Title>
 
       <Swiper {...params}>
@@ -82,6 +82,6 @@ export const ShowMovie = ({ titleName, movieData }) => {
         ))}
         {/* => 배열을 배열 수만큼 반복해서 사용하게 해주기 위해 map 사용 */}
       </Swiper>
-    </Layout>
+    </Container>
   );
 };

@@ -1,6 +1,9 @@
 const fetch = require("node-fetch");
 
 const baseUrl = "https://api.themoviedb.org/3/";
+
+// const urlSetting = baseUrl +  + "?language=ko-kr";
+
 const nowPlayingUrl = baseUrl + "movie/now_playing" + "?language=ko-kr";
 const popularUrl = baseUrl + "movie/popular" + "?language=ko-kr";
 const ratedUrl = baseUrl + "movie/top_rated" + "?language=ko-kr";
