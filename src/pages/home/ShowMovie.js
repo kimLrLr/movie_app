@@ -64,10 +64,10 @@ const params = {
   },
 };
 
-export const ShowMovie = ({ movieData }) => {
+export const ShowMovie = ({ titleName, movieData }) => {
   return (
     <Layout>
-      <Title>현재 상영 영화</Title>
+      <Title>{titleName}</Title>
 
       <Swiper {...params}>
         {/* ...params는 params를 불러왔을때 생기는 중괄호를 벗겨내기 위함 */}

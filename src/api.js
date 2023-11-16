@@ -2,6 +2,9 @@ const fetch = require("node-fetch");
 
 const baseUrl = "https://api.themoviedb.org/3/";
 const nowPlayingUrl = baseUrl + "movie/now_playing" + "?language=ko-kr";
+const popularUrl = baseUrl + "movie/popular" + "?language=ko-kr";
+const ratedUrl = baseUrl + "movie/top_rated" + "?language=ko-kr";
+const upUrl = baseUrl + "movie/upcoming" + "?language=ko-kr";
 
 const options = {
   method: "GET",
@@ -14,3 +17,10 @@ const options = {
 
 export const nowPlaying = () =>
   fetch(nowPlayingUrl, options).then((res) => res.json());
+
+export const popular = () =>
+  fetch(popularUrl, options).then((res) => res.json());
+
+export const rated = () => fetch(ratedUrl, options).then((res) => res.json());
+
+export const upComing = () => fetch(upUrl, options).then((res) => res.json());
