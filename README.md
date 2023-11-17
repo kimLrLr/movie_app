@@ -23,4 +23,4 @@
 - [] header scroll event 설정
 - [] 전체 페이지 helmet 구성
 - [] 404 page ui 설정
-- [] helmet 사용시 경고 처리
+- [x] helmet 사용시 경고 처리
