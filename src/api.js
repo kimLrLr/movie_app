@@ -32,10 +32,10 @@ export const rated = () =>
 export const upComing = () =>
   fetch(movieUrl("upcoming"), options).then((res) => res.json());
 
-export const movieDetail = (id) => {
-  const detailUrl = baseUrl + `movie/${id}` + "?language=ko-kr";
-  return fetch(detailUrl, options).then((res) => res.json());
-};
+// export const movieDetail = (id) => {
+//   const detailUrl = baseUrl + `movie/${id}` + "?language=ko-kr";
+//   return fetch(detailUrl, options).then((res) => res.json());
+// };
 
-// export const movieDetail = (id) =>
-//   fetch(movieUrl(`${id}`), options).then((res) => res.json());
+export const movieDetail = (id) =>
+  fetch(movieUrl(`${id}`), options).then((res) => res.json());
