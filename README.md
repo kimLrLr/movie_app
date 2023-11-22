@@ -7,8 +7,8 @@
 - [x] styled-reset
 - [x] swiper
 - [x] react spinner
-- [] react-hook-form
-- [] react-helmet
+- [x] react-hook-form
+- [x] react-helmet
 - [] Font Awsome & cdn
 
 ## TODO
@@ -18,9 +18,11 @@
 - [x] api 설정
 - [x] loading 설정
 - [x] Home ui 및 전체 구성
-- [] Detail ui 및 전체 구성 컴포넌트 구성
+- [x] Detail ui 및 전체 구성 컴포넌트 구성
 - [] Search ui 및 전체 구성 컴포넌트 구성
-- [] header scroll event 설정
+- [x] header scroll event 설정
+- [x] scrollTo 이벤트 설정
 - [] 전체 페이지 helmet 구성
+- [] Search페이지 클릭했을때 detail로 연결되도록
 - [] 404 page ui 설정
 - [x] helmet 사용시 경고 처리

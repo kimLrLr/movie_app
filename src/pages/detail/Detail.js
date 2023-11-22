@@ -4,6 +4,7 @@ import { movieDetail } from "../../api";
 import { Loading } from "../home/Loading";
 import styled from "styled-components";
 import { IMG_URL } from "../../constants";
+import { useScrollTop } from "../../lib/useScrollTop";
 
 const Con = styled.div`
   width: 100vw;
@@ -74,19 +75,20 @@ export const Detail = () => {
   // console.log(id);
   const [detailData, setDetailData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  useScrollTop();
 
   useEffect(() => {
     (async () => {
       try {
         const detailData = await movieDetail(id);
-        console.log(detailData);
+        // console.log(detailData);
         setDetailData(detailData);
         setIsLoading(false);
       } catch (error) {
         console.log("에러: " + error);
       }
     })();
-  }, []);
+  }, [id]);
 
   return (
     <>
