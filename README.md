@@ -1,28 +1,3 @@
 # Movie App
 
-## 설치 항목
-
-- [x] react-router-dom
-- [x] styled-components
-- [x] styled-reset
-- [x] swiper
-- [x] react spinner
-- [x] react-hook-form
-- [x] react-helmet
-- [] Font Awsome & cdn
-
-## TODO
-
-- [x] router 설정
-- [x] 각 컴포넌트 제작
-- [x] api 설정
-- [x] loading 설정
-- [x] Home ui 및 전체 구성
-- [x] Detail ui 및 전체 구성 컴포넌트 구성
-- [] Search ui 및 전체 구성 컴포넌트 구성
-- [x] header scroll event 설정
-- [x] scrollTo 이벤트 설정
-- [] 전체 페이지 helmet 구성
-- [] Search페이지 클릭했을때 detail로 연결되도록
-- [] 404 page ui 설정
-- [x] helmet 사용시 경고 처리
+### 바쁜 현대 사회인들이 자신의 꿀 같은 휴식 시간을 할애하여 영화를 보고자 마음을 먹었을 때, 영화를 보기도 전 선택에 있어 많은 시간이 소요되는 것 같다고 생각했습니다. 어떤 영화를 보는 것이 좋을지 긴 시간 고민을 하게 되는 사용자에게 한눈에 잘 보이는 UI를 통하여 편안한 마음으로 콘텐츠를 즐길 수 있도록 영화 선정에 있어 조금 더 가볍고 빠르게 선택의 고민을 끝낼 수 있도록 돕고자 하는 목적으로 본 프로젝트를 진행하였습니다.
