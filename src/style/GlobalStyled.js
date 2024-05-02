@@ -6,6 +6,11 @@ export const mainColors = {
   pointColor: "#D0A2F7",
 };
 
+export const mediaFont = {
+  tabletFontSize: "15px",
+  mobileFontSize: "14px",
+};
+
 export const GlobalStyled = createGlobalStyle`
     ${reset}
 
