@@ -22,6 +22,15 @@ const ConWrap = styled.div`
   /* =>가로 컨텐츠 간격 */
   row-gap: 50px;
   /* =>세로 컨텐츠 간격 */
+
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const Con = styled.div``;
@@ -32,7 +41,10 @@ const Bg = styled.div`
     cover;
 `;
 
-const MovieTitle = styled.div``;
+const MovieTitle = styled.div`
+  margin-top: 10px;
+  line-height: 18px;
+`;
 
 export const Search = () => {
   //api에 검색 요청에 맞게 url연결과 매개변수 작성할것
