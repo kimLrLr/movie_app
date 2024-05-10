@@ -151,7 +151,6 @@ const DescScroll = styled.nav`
   height: 30%;
   &::-webkit-scrollbar {
     width: 4px;
-    /* height: 8px; */
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.4);
   }
@@ -170,18 +169,15 @@ const DescScroll = styled.nav`
 `;
 
 const Desc = styled.div`
-  /* margin-top: 40px; */
   line-height: 30px;
   color: #dbdbdb;
 
   @media screen and (max-width: 1024px) and (min-width: 768px) {
-    /* margin-top: 30px; */
     line-height: 25px;
     font-size: ${mediaFont.tabletFontSize};
   }
 
   @media screen and (max-width: 768px) {
-    /* margin-top: 10px; */
     line-height: 20px;
     font-size: ${mediaFont.mobileFontSize};
   }

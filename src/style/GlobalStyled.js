@@ -26,7 +26,7 @@ export const GlobalStyled = createGlobalStyle`
         background-color: ${mainColors.blackColor};
         color: white;
         letter-spacing: -1px;
-        word-break: break-all;
+        word-break: keep-all;
         /* =>단어 별로 줄바꿈 처리 */
         font-family: "Noto Sans KR", sans-serif;
     }
